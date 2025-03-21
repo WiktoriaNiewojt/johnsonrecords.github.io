@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ariana Grande - Biography">
+    <title>Ariana Grande | Biography</title>
+    <link rel="stylesheet" href="CSS/sabrina css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css" />
+    <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+    <style>
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        body.dark-mode .navbar {
+            background-color: #333;
+        }
+        body.dark-mode h1, body.dark-mode .subtitle, body.dark-mode .timeline-item h4 {
+            color: #ff5a5f;
+        }
+        body.dark-mode .gallery-item img {
+            filter: brightness(0.7);
+        }
+        body.dark-mode .footer-menu-link {
+            color: #ffffff;
+        }
+
+        /* Existing styles for light mode */
+        h1, .subtitle, .timeline-item h4 {
+            color: #ff5a5f;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #dee2e6;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 3rem;
+        }
+
+        .timeline-item::before {
+            content: attr(data-year);
+            position: absolute;
+            left: -4.5rem;
+            background: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 2px solid #dee2e6;
+        }
+
+        .album-card {
+            transition: transform 0.3s ease;
+        }
+
+        .album-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        /* Image hover zoom effect */
+        .gallery-item img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 1rem;
+            transition: bottom 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            bottom: 0;
+        }
+
+        /* Add subtle shadow effect to images */
+        .gallery-item img:hover {
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-toggle-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #000; /* Adjust color if needed */
+        }
+
+        .theme-toggle-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="Images/output-onlinepngtools.png" width="200" height="156" alt="Sabrina Carpenter Logo" />
+            </a>
+            <div class="d-lg-none">
+                <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                <a href="product-detail.html" class="bi-bag custom-icon me-3"></a>
+                <button class="theme-toggle-btn" onclick="toggleDarkMode()">🌙</button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Artists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                </ul>
+                <div class="d-none d-lg-block">
+                    <a href="shopping cart.htm" class="bi-bag custom-icon me-3"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('sabrina images/hero-bg.jpg') center/cover;">
+        <div class="container text-center">
+            <h1 class="display-2 text-white">Ariana Grande</h1>
+            <p class="subtitle text-white fs-4">Singer   • Songwriter • Actress</p>
+            <p class="text-white mt-4">&nbsp;</p>
+            <div class="scroll-indicator">
+                <span class="bi bi-chevron-down text-white"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="biography py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2 class="text-center mb-5">About Ariana Grande</h2>
+                    <div class="bio-content">
+                        <p class="lead">
+                         <strong> Ariana Grande is an American singer, songwriter, and actress born on June 26, 1993, in Boca Raton, Florida. She started her career on Nickelodeon, playing Cat Valentine in shows like "Victorious" and "Sam & Cat." Ariana later became a global pop sensation with her debut album, "Yours Truly," in 2013, and went on to release hits like "Thank U, Next" and "Positions." Known for her powerful voice and four-octave range, she’s won numerous awards, including Grammys. Alongside her music, Ariana has ventured into acting, business, and philanthropy, becoming one of the most influential pop stars of her generation.  </strong></p>
+                        <div class="timeline mt-5">
+                            <div class="timeline-item" data-year="2013">
+                                <h4>Career Beginning</h4>
+                                <p>Released "Yours Truly", the first album which became a huge success</p>
+                            </div>
+                            <div class="timeline-item" data-year="2014">
+                                <h4>Breakthrough Album</h4>
+                                <p>Released "My Everything" which is Ariana's most successful album, featuring many popular artists</p>
+                            </div>
+                            <div class="timeline-item" data-year="2019">
+                                <h4>Major Hits</h4>
+                                <p>Ariana's album "thank u, next" garnered lots of attention and love from fans with songs like "7 Rings" which is a huge success </p>
+                            </div>
+                            <div class="timeline-item" data-year="2024">
+                                <h4>Continued Success</h4>
+                                <p>Now, Ariana is one of the most well-recognised artists in the world, currently doing her project "Wicked"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="discography bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Discography</h2>
+            <div class="row">
+                <div class="col-md-3 album-card">
+                    <div class="card h-100">
+                        <img src="ariana images/YT.jfif" class="card-img-top" alt="Baby One More Time">
+                        <div class="card-body">
+                          <h5>Yours Truly</h5>
+                            <p class="text-muted">2013</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 album-card">
+                    <div class="card h-100">
+                        <img src="ariana images/mE.jpg" class="card-img-top" alt="Oops!... I Did It Again">
+                        <div class="card-body">
+                          <h5>My Everything</h5>
+                            <p class="text-muted">2014</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 album-card">
+                    <div class="card h-100">
+                        <img src="ariana images/tun.jfif" class="card-img-top" alt="Toxic">
+                      <div class="card-body">
+                        <h5>thank u, next</h5>
+                          <p class="text-muted">2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 album-card">
+                    <div class="card h-100">
+                        <img src="ariana images/wicked.png" class="card-img-top" alt="Glory">
+                      <div class="card-body">
+                        <h5>Wicked</h5>
+                          <p class="text-muted">2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Gallery</h2>
+        <div class="slick-gallery">
+            <div class="gallery-item mx-2">
+                <img src="ariana images/79c4c3776954eb3f25e8781f7f6ff979.png" class="img-fluid" alt="Sabrina Carpenter Performance">
+                <div class="overlay">
+                    <p>We Can't Be Friends Photoshoot</p>
+                </div>
+            </div>
+            <div class="gallery-item mx-2">
+                <img src="ariana images/OIP.jpg" class="img-fluid" alt="Sabrina Carpenter Portrait">
+                <div class="overlay">
+                    <p>Photoshoot</p>
+                </div>
+            </div>
+            <div class="gallery-item mx-2">
+                <img src="ariana images/8ef09538b2d3a1b72c3cd16e1dd91117--front-row-singers.jpg" class="img-fluid" alt="Sabrina Carpenter Event">
+                <div class="overlay">
+                    <p>Concert</p>
+                </div>
+            </div>
+            <div class="gallery-item mx-2">
+                <img src="ariana images/c4c019bb13a96d08ae472bd2d4ce9f4c.jpg" class="img-fluid" alt="Sabrina Carpenter Candid">
+                <div class="overlay">
+                    <p>Dangerous Woman Photoshoot</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-burgundy mb-3">Johnson's Records</h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">© 2025 Johnson's Records. All rights reserved.<br></p>
+                </div>
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="index.html" class="footer-menu-link">Artists</a></li>
+                        <li class="footer-menu-item"><a href="products.html" class="footer-menu-link">Products</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.slick-gallery').slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '0',
+            pauseOnHover: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+
+    // Dark Mode Toggle Function
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
+
+</body>
+</html>

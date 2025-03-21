@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Set up the basic page metadata -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Link external CSS files -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/slick.css" />
+        <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+
+        <style>
+            /* Light mode styles (default) */
+            body {
+                background-color: #ffffff;
+                color: #000000;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .navbar {
+                background-color: #ffffff;
+                color: #000000;
+            }
+
+            .footer {
+                background-color: #f1f1f1;
+            }
+
+            /* Dark mode styles */
+            body.dark-mode {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            .navbar.dark-mode {
+                background-color: #333333;
+                color: #ffffff;
+            }
+
+            .footer.dark-mode {
+                background-color: #1c1c1c;
+            }
+
+            /* Dark mode text color */
+            body.dark-mode {
+                color: #ff6f61; /* Set text color to a warm orange/red when dark mode is enabled */
+            }
+
+            .navbar.dark-mode {
+                color: #ffffff;
+            }
+
+            /* Hover animation on the toggle button */
+            .theme-toggle-btn {
+                background-color: transparent;
+                border: none;
+                color: #000000;
+                font-size: 24px;
+                cursor: pointer;
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+
+            .theme-toggle-btn:hover {
+                transform: scale(1.2);  /* Slightly enlarge the button on hover */
+            }
+
+            .theme-toggle-btn.dark-mode {
+                color: #ffffff;
+            }
+
+            /* For dark mode, navbar icons should be white */
+            .navbar.dark-mode .custom-icon {
+                color: #ffffff;
+            }
+
+            /* Custom icon styling for navbar */
+            .custom-icon {
+                font-size: 24px;
+                color: #000000;
+                transition: color 0.3s ease;
+            }
+
+            .navbar .custom-icon:hover {
+                color: #007bff;
+            }
+
+            /* For dark mode, navbar icons should be white */
+            .navbar.dark-mode .custom-icon {
+                color: #ffffff;
+            }
+
+            /* Artist text color (match the orange/pink color across the site) */
+            .artist-thumb h5 {
+                color: #ff6f61; /* This is the same color as the rest of the website */
+                transition: color 0.3s ease;
+            }
+
+            .artist-thumb h5:hover {
+                color: #f0a500; /* Slightly darker color on hover */
+            }
+
+            /* Hover animation for artist images */
+            .artist-thumb img {
+                transition: transform 0.3s ease;
+            }
+
+            .artist-thumb img:hover {
+                transform: scale(1.1); /* Zoom in the image slightly on hover */
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="Images/output-onlinepngtools.png" width="200" height="156" alt="" />
+                </a>
+
+                <div class="d-lg-none">
+                    <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Artists</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">&nbsp;</a></li>
+                    </ul>
+
+                    <div class="d-none d-lg-block">
+                        <a href="shopping cart.htm" class="bi-bag custom-icon"></a>
+                        <!-- Dark Mode Toggle Button in the navbar -->
+                        <button class="theme-toggle-btn" onclick="toggleDarkMode()">🌙</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Section for Featured Artists -->
+            <section class="featured-product section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">Artists</h2>
+                        </div>
+
+                        <!-- Artist 1: Sabrina Carpenter -->
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="artist-thumb border p-3">
+                                <a href="sabrina page.html">
+                                    <img src="Images/sabrina carpenter.png" alt="Sabrina Carpenter" class="img-fluid">
+                                </a>
+                                <h5 class="text-center mt-3">Sabrina Carpenter</h5>
+                            </div>
+                        </div>
+
+                        <!-- Artist 2: Ariana Grande -->
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="artist-thumb border p-3">
+                                <a href="ariana page.html">
+                                    <img src="Images/ariana grande.png" alt="Ariana Grande" class="img-fluid">
+                                </a>
+                                <h5 class="text-center mt-3">Ariana Grande</h5>
+                            </div>
+                        </div>
+
+                        <!-- Artist 3: Britney Spears -->
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="artist-thumb border p-3">
+                                <a href="britney page.html">
+                                    <img src="Images/Britney Spears.png" alt="Britney Spears" class="img-fluid">
+                                </a>
+                                <h5 class="text-center mt-3">Britney Spears</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-burgundy mb-3">Johnson's Records</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">© 2025 Johnson's Records. All rights reserved.<br></p>
+                    </div>
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="index.html" class="footer-menu-link">Artists</a></li>
+                            <li class="footer-menu-item"><a href="products.html" class="footer-menu-link">Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript Files -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Headroom.js"></script>
+        <script src="js/jQuery.headroom.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/custom.js"></script>
+
+        <!-- Dark Mode Toggle Script -->
+        <script>
+            // Function to toggle dark mode
+            function toggleDarkMode() {
+                const body = document.body;
+                const navbar = document.querySelector('.navbar');
+                const footer = document.querySelector('.site-footer');
+                const toggleBtn = document.querySelector('.theme-toggle-btn');
+
+                // Toggle dark-mode class
+                body.classList.toggle('dark-mode');
+                navbar.classList.toggle('dark-mode');
+                footer.classList.toggle('dark-mode');
+
+                // Update the button icon
+                if (body.classList.contains('dark-mode')) {
+                    toggleBtn.innerHTML = '🌕';  // Moon to Sun icon
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    toggleBtn.innerHTML = '🌙';  // Sun to Moon icon
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            // Check for stored theme preference on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    document.querySelector('.navbar').classList.add('dark-mode');
+                    document.querySelector('.site-footer').classList.add('dark-mode');
+                    document.querySelector('.theme-toggle-btn').innerHTML = '🌕';  // Show Sun icon
+                }
+            });
+        </script>
+    </body>
+</html>

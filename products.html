@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Products | Your Products">
+    <title>Products</title>
+    <link rel="stylesheet" href="CSS/sabrina css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css" />
+    <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+    <style>
+        /* Style for the "Add to Basket" button */
+        .add-to-basket-btn {
+            background: linear-gradient(135deg, #ff5f6d, #ffc3a0);  /* Gradient from pink to light peach */
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        /* Animation effect on hover */
+        .add-to-basket-btn:hover {
+            background: linear-gradient(135deg, #ff5f6d, #ff8c42);  /* Change to a slightly different gradient on hover */
+            transform: scale(1.1);  /* Slightly scale up */
+            box-shadow: 0 4px 15px rgba(255, 95, 109, 0.5); /* Add a glowing effect */
+        }
+
+        /* Adding a smooth effect for button clicks */
+        .add-to-basket-btn:active {
+            transform: scale(0.98);  /* Slightly shrink when clicked */
+        }
+
+        /* Optional: Button focus style */
+        .add-to-basket-btn:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 95, 109, 0.8); /* Subtle glowing effect on focus */
+        }
+
+        /* Video container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Title overlay */
+        .video-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Show title on hover */
+        .video-container:hover .video-title {
+            opacity: 1; /* Make title visible */
+            transform: translate(-50%, -50%) scale(1.1); /* Slightly scale up */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="Images/output-onlinepngtools.png" width="200" height="156" alt="Logo" />
+            </a>
+            <div class="d-lg-none">
+                <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                <a href="shopping cart.html" class="bi-bag custom-icon"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Artists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                </ul>
+                <div class="d-none d-lg-block">
+                    <a href="shopping cart.htm" class="bi-bag custom-icon"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Available Products</h2>
+            <div class="row">
+                <!-- Product Item 1 -->
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="video-container">
+                            <iframe class="product-video" width="100%" height="315" src="video/couldn't make it any harder.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="video-title">Couldn't Make It Any Harder</div>
+                        </div>
+                        <div class="price">£30.00</div>
+                        <button class="add-to-basket-btn" onclick="addToBasket('CMIAH', 30)">Add to Basket</button>
+                    </div>
+                </div>
+                <!-- Product Item 2 -->
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="video-container">
+                            <iframe class="product-video" width="100%" height="315" src="video/espresso.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="video-title">Espresso</div>
+                        </div>
+                        <div class="price">£25.00</div>
+                        <button class="add-to-basket-btn" onclick="addToBasket('Espresso', 25)">Add to Basket</button>
+                    </div>
+                </div>
+                <!-- Product Item 3 -->
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="video-container">
+                            <iframe class="product-video" width="100%" height="315" src="video/Dangerous_Woman.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="video-title">Dangerous Woman</div> 
+                        </div>
+                        <div class="price">£35.00</div>
+                        <button class="add-to-basket-btn" onclick="addToBasket('Dangerous Woman', 35)">Add to Basket</button>
+                    </div>
+                </div>
+                <!-- Product Item 4 -->
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="video-container">
+                            <iframe class="product-video" width="100%" height="315" src="video/love me harder.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="video-title">Love Me Harder</div>
+                        </div>
+                        <div class="price">£20.00</div>
+                        <button class="add-to-basket-btn" onclick="addToBasket('Love Me Harder', 20)">Add to Basket</button>
+                    </div>
+                </div>
+                <!-- Product Item 5 -->
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="video-container">
+                            <iframe class="product-video" width="100%" height="315" src="video/baby one more time.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="video-title">Baby One More Time</div>
+                        </div>
+                        <div class="price">£28.00</div>
+                        <button class="add-to-basket-btn" onclick="addToBasket('Baby One More Time', 28)">Add to Basket</button>
+                    </div>
+                </div>
+                <!-- Product Item 6 -->
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="video-container">
+                            <iframe class="product-video" width="100%" height="315" src="video/Sometimes.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="video-title">Sometimes</div> 
+                        </div>
+                        <div class="price">£40.00</div>
+                        <button class="add-to-basket-btn" onclick="addToBasket('Sometimes', 40)">Add to Basket</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-burgundy mb-3">Johnson's Records</h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">© 2025 Johnson's Records. All rights reserved.<br></p>
+                </div>
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="index.html" class="footer-menu-link">Home</a></li>
+                        <li class="footer-menu-item"><a href="index.html" class="footer-menu-link">Artists</a></li>
+                        <li class="footer-menu-item"><a href="products.html" class="footer-menu-link">Products</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to add items to the basket and log data for debugging
+        function addToBasket(itemName, itemPrice) {
+            console.log(`Adding to basket: ${itemName} - £${itemPrice}`); // Debugging log
+
+            let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+            console.log('Current Cart:', cart);  // Log current cart to debug
+
+            // Check if the item already exists in the cart
+            let existingItem = cart.find(item => item.name === itemName);
+
+            if (existingItem) {
+                existingItem.quantity += 1; // Increase quantity if already in cart
+            } else {
+                cart.push({ name: itemName, price: itemPrice, quantity: 1 }); // Add new item with quantity 1
+            }
+
+            localStorage.setItem("shoppingCart", JSON.stringify(cart));
+            alert(itemName + " has been added to your basket!");
+            console.log('Updated Cart:', cart); // Log updated cart for debugging
+        }
+    </script>
+
+</body>
+</html>
