@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Product Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    position: relative; /* Important to position the button relative to the product item */
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.add-to-basket-btn {
+    position: absolute;  /* Position the button inside the product item */
+    bottom: 20px;        /* Adjust bottom margin to place the button above the bottom of the product container */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;         /* Ensure the button appears above the iframe */
+    background: linear-gradient(135deg, #ff5f6d, #ffc3a0);  /* Gradient from pink to light peach */
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* Animation effect on hover */
+.add-to-basket-btn:hover {
+    background: linear-gradient(135deg, #ff5f6d, #ff8c42);  /* Change to a slightly different gradient on hover */
+    transform: scale(1.1);  /* Slightly scale up */
+    box-shadow: 0 4px 15px rgba(255, 95, 109, 0.5); /* Add a glowing effect */
+}
+
+/* Adding a smooth effect for button clicks */
+.add-to-basket-btn:active {
+    transform: scale(0.98);  /* Slightly shrink when clicked */
+}
+
+/* Optional: Button focus style */
+.add-to-basket-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 95, 109, 0.8); /* Subtle glowing effect on focus */
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.site-footer .footer-menu {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-footer .footer-menu-item {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.site-footer .footer-menu-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.site-footer .footer-menu-link:hover {
+    color: #ffc107;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product-item {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .add-to-basket-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

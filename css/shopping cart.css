@@ -1,0 +1,81 @@
+/* General Cart Styling */
+.cart {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Empty Cart Message */
+#empty-cart-message {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+/* Cart Items */
+.cart-items {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Cart Item */
+.cart-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Details */
+.product-details h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.product-price p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-menu-link {
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu-link:hover {
+    color: #ffcc00;
+}
+body {
+    padding-top: 70px; /
+}
+
+
+.cart-items {
+    padding-top: 20px; /
+}

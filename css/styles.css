@@ -1,0 +1,86 @@
+/* styles.css */
+
+/* Body and general layout */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    background-color: #eff7ff;
+}
+
+.navbar-brand img {
+    width: 200px;
+    height: 156px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+    color: #007bff;
+}
+
+.featured-product {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+}
+
+.featured-product h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+
+.artist-thumb {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.artist-thumb:hover {
+    transform: scale(1.05);
+}
+
+.artist-thumb img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center h5 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.site-footer .footer-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.site-footer .footer-menu-item {
+    margin-bottom: 10px;
+}
+
+.site-footer .footer-menu-link {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.site-footer .footer-menu-link:hover {
+    color: white;
+}
+
+.text-burgundy {
+    color: #9b2d20;
+}
